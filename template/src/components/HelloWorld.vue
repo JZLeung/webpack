@@ -2,7 +2,7 @@
   {{#if_eq template "pug"}}
   .hello
     h1 \{{msg}}
-    h2 Essential Links
+    h2 Essential Links From pug.
     ul
       li
         a(href='https://vuejs.org', target='_blank')

@@ -68,6 +68,23 @@ module.exports = {
         },
       ],
     },
+    ratio: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Adaptive solution',
+      choices: [
+        {
+          name: 'Normal: use px',
+          value: 'normal',
+          short: 'normal',
+        },
+        {
+          name: 'vw/vh: use vw instead of px (use 大漠 solution)',
+          value: 'vw',
+          short: 'vw',
+        },
+      ],
+    },
     build: {
       when: 'isNotTest',
       type: 'list',

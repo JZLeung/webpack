@@ -45,6 +45,12 @@ module.exports = {
       {{#lint}}
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {{/lint}}
+      {{#if_eq template "pug"}}
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader'
+      },
+      {{/if_eq}}
       {
         test: /\.vue$/,
         loader: 'vue-loader',

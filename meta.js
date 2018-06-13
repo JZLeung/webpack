@@ -51,6 +51,23 @@ module.exports = {
       type: 'string',
       message: 'Author',
     },
+    template: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'Template Engine',
+      choices: [
+        {
+          name: 'Normal',
+          value: 'normal',
+          short: 'normal',
+        },
+        {
+          name: 'Pug',
+          value: 'pug',
+          short: 'pug',
+        },
+      ],
+    },
     build: {
       when: 'isNotTest',
       type: 'list',

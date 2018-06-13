@@ -114,6 +114,10 @@
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "portfinder": "^1.0.13",
+    {{#if_eq template "pug"}}
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    {{/if_eq}}
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
@@ -125,6 +129,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
+    "iOS >= 7",
     "not ie <= 8"
   ]
 }

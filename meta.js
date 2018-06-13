@@ -85,6 +85,28 @@ module.exports = {
         },
       ],
     },
+    style: {
+      when: 'isNotTest',
+      type: 'list',
+      message: 'CSS extension language',
+      choices: [
+        {
+          name: 'Normal: use css',
+          value: 'normal',
+          short: 'normal',
+        },
+        {
+          name: 'scss/sass',
+          value: 'scss',
+          short: 'scss',
+        },
+        {
+          name: 'less',
+          value: 'less',
+          short: 'less',
+        },
+      ],
+    },
     build: {
       when: 'isNotTest',
       type: 'list',

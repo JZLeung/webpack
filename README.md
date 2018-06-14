@@ -1,22 +1,30 @@
-# vue-webpack-boilerplate
+# vue-webpack-mobile-template
 
-> A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
-
-> This template is Vue 2.0 compatible. For Vue 1.x use this :command `vue init webpack#1.0 my-project`
-
-## Feature
 > A template for mobile project, fork from [vuejs-templates/webpack](https://github.com/JZLeung), modified by [LeungJZ](https://github.com/JZLeung)
 
+## Feature
 - [x] pug
 - [x] vw/vh
 - [x] scss/less
 - [x] cdn
 - [x] dll
 - [ ] flexible/rem
+- [ ] 1px line in mobile
 
 ... and so on.
 
-## New Template Usage
+## What's New
+- [Pug](https://github.com/pugjs/pug) - A high-performance template engine
+- [vw/vh in css](https://www.w3cplus.com/mobile/vw-layout-in-vue.html) - A mobile side layout solution
+- CSS pre-processor - Scss/Less
+- CDN - use BootCdn to increase the loading speed
+- [webpackDllPlugin](https://webpack.js.org/plugins/dll-plugin/) - use webpackDllPlugin to increase the speed of packing
+- 1px line in mobile - 
+Solve the problem of mobile side 1px line display
+
+## Usage
+
+This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
 
 ``` bash
 $ npm install -g vue-cli
@@ -25,19 +33,14 @@ $ cd my-project
 $ npm install
 $ npm run dev
 ```
-
-## Documentation
-
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
-- [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
-
-## Usage
-
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
+The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
 
 :warning: **The develop branch is not considered stable and can contain bugs or not build at all, so use at your own risk.**
 
-The development server will run on port 8080 by default. If that port is already in use on your machine, the next free port will be used.
+## Documentation
+
+- [For the based template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
+- [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
 
 ## What's Included
 
@@ -48,9 +51,7 @@ The development server will run on port 8080 by default. If that port is already
   - Lint-on-save with ESLint
   - Source maps
 
-- `npm run build:dll`: **If you use the webpackDllPlugin, please run this command before `npm run dev`**
-  - webpackDllPlugin suport.
-  - generate the dll.js and manifest.json for DllReferencePlugin.
+
 
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS v3](https://github.com/mishoo/UglifyJS2/tree/harmony).

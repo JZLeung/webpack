@@ -18,9 +18,16 @@ function resolve (dir) {
     emitWarning: !config.dev.showEslintErrorsInOverlay
   }
 }){{/lint}}
-
+{{#if_eq cdn true}}const {externals, plugins} = require('./cdn'){{else}}
+{{#if dll}}const webpack = require('webpack')
+const plugins = [new webpack.DllReferencePlugin({
+  context: __dirname,
+  manifest: require('./vendor-manifest.json')
+}),]{{/if}}{{/if_eq}}
 module.exports = {
   context: path.resolve(__dirname, '../'),
+  {{#if cdn}}externals,
+  plugins,{{else}}{{#if dll}}plugins,{{/if}}{{/if}}
   entry: {
     app: './src/main.js'
   },

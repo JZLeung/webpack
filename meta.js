@@ -85,6 +85,16 @@ module.exports = {
         },
       ],
     },
+    cdn: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Use Bootcdn in production environment?',
+    },
+    dll: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Use webpackDllPlugin in production environment?',
+    },
     style: {
       when: 'isNotTest',
       type: 'list',
@@ -218,6 +228,8 @@ module.exports = {
     '.eslintignore': 'lint',
     'config/test.env.js': 'unit || e2e',
     'build/webpack.test.conf.js': "unit && runner === 'karma'",
+    'build/webpack.dll.conf.js': "dll",
+    'build/cdn.js': "cdn",
     'test/unit/**/*': 'unit',
     'test/unit/index.js': "unit && runner === 'karma'",
     'test/unit/jest.conf.js': "unit && runner === 'jest'",

@@ -2,7 +2,7 @@
 
 > A full-featured Webpack setup with hot-reload, lint-on-save, unit testing & css extraction.
 
-> This template is Vue 2.0 compatible. For Vue 1.x use this command: `vue init webpack#1.0 my-project`
+> This template is Vue 2.0 compatible. For Vue 1.x use this :command `vue init webpack#1.0 my-project`
 
 ## Feature
 > A template for mobile project, fork from [vuejs-templates/webpack](https://github.com/JZLeung), modified by [LeungJZ](https://github.com/JZLeung)
@@ -10,8 +10,21 @@
 - [x] pug
 - [x] vw/vh
 - [x] scss/less
+- [x] cdn
+- [x] dll
+- [ ] flexible/rem
 
 ... and so on.
+
+## New Template Usage
+
+``` bash
+$ npm install -g vue-cli
+$ vue init JZLeung/webpack#mobile my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
 
 ## Documentation
 
@@ -21,20 +34,6 @@
 ## Usage
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It is recommended to use npm 3+ for a more efficient dependency tree.**
-
-``` bash
-$ npm install -g vue-cli
-$ vue init webpack my-project
-$ cd my-project
-$ npm install
-$ npm run dev
-```
-
-This will scaffold the project using the `master` branch. If you wish to use the latest version of the webpack template, do the following instead:
-
-``` bash
-$ vue init webpack#develop my-project
-```
 
 :warning: **The develop branch is not considered stable and can contain bugs or not build at all, so use at your own risk.**
 
@@ -48,6 +47,10 @@ The development server will run on port 8080 by default. If that port is already
   - State preserving compilation error overlay
   - Lint-on-save with ESLint
   - Source maps
+
+- `npm run build:dll`: **If you use the webpackDllPlugin, please run this command before `npm run dev`**
+  - webpackDllPlugin suport.
+  - generate the dll.js and manifest.json for DllReferencePlugin.
 
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS v3](https://github.com/mishoo/UglifyJS2/tree/harmony).
